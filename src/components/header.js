@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
+    <Navbar bg="dark" variant="dark" expand="lg" >
+      <Container style={{ }}>
         <Navbar.Brand href="/home">Lucia Sotelo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

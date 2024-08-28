@@ -1,5 +1,5 @@
 body {
-  background-image: url('../src/images/portfolioBackground.jpeg'); /* Replace with your image path */
+  background-image: url('../src/images/background.jpeg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@ body {
 }
 
 .home-page {
-  background-image: url('../src/images/portfolioBackground.jpeg'); /* Replace with your image path */
+  background-image: url('../src/images/background.jpeg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,9 +19,7 @@ body {
   justify-content: center; /* Center the content horizontally */
 }
 
-.content-container {
-  background-color: rgba(21, 85, 101, 0.5); 
-  padding: .5rem;
-  border-radius: 15px; 
-}
+
+
+
 

@@ -1,16 +1,37 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import yourImage from '../images/portfolioBackground.jpeg';  // Replace with the path to your image
+
+// Updated import path for the image
+import headshot from '../images/head.jpg';
 
 const MainInfo = () => {
   return (
-    <Container className="text-center mt-5 content-container position-relative">
-      <img src={yourImage} fluid className="rounded shadow w-100" alt="Main Portfolio Image" />
-      <div className="overlay-text">
-        <h1>Your Main Title</h1>
-        <p>Your subtitle or description goes here.</p>
-      </div>
+    <Container className="mt-5">
+      <Row className="align-items-center">
+        <Col md={6}>
+          <div className="content-container position-relative">
+            <div className="overlay-text" style={{border: '10px solid lightblue', backgroundColor: 'lightblue', borderRadius: '10px', textAlign: 'center'}}>
+              <h1>Lucia Sotelo</h1>
+              <h2>Software Developer</h2>
+              <p>HTML | CSS | UX UI | JavaScript | Python | React | Node</p>
+            </div>
+          </div>
+           {/* Buttons added below */}
+              <div className="mt-3" style={{display: 'flex', justifyContent: 'center'}}>
+                <Button variant="primary" href="#portfolio" className="me-2">See Portfolio</Button>
+                <Button variant="outline-primary" href="#contact">Contact Me</Button>
+              </div>
+        </Col>
+        <Col md={6} className="text-center">
+          <img 
+            style={{border: '10px solid lightblue'}}
+            src={headshot} 
+            alt="Lucia Sotelo" 
+            className="img-fluid responsive-img"
+          />
+        </Col>
+      </Row>
     </Container>
   );
 }
