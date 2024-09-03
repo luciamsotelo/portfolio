@@ -1,22 +1,23 @@
 import React from 'react';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css'; 
 
 const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" >
-      <Container style={{ }}>
+    <Navbar style={{backgroundColor: '#d2b48c', color: '#8b4513'}}>
+      <Container>
         <Navbar.Brand href="/home">Lucia Sotelo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/projects">Portfolio</Nav.Link>
-            <Nav.Link href="/collaboration">Collaboration</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link className="bar" href="/home">Home</Nav.Link>
+            <Nav.Link className="bar" href="/about">About</Nav.Link>
+            <Nav.Link className="bar" href="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link className="bar" href="/collaboration">Collaboration</Nav.Link>
+            <Nav.Link className="bar" href="/contact">Contact</Nav.Link>
           </Nav>
-          <Button variant="outline-light" href="/hire">Hire Me</Button>
+          <Button variant="outline-primary" className="bar_button" style={{color: '#8b4513'}} href="/hire">Hire Me</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

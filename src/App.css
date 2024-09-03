@@ -1,25 +1,109 @@
+/* App.css */
+
+/* Background gradient for the entire body */
 body {
-  background-image: url('../src/images/background.jpeg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right, #e5d3bb, #1c718e, #e5d3bb);
+  height: 100vh;
   width: 100%;
+  margin: 0;
 }
 
-.home-page {
-  background-image: url('../src/images/background.jpeg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Full viewport height */
-  width: 100%;
+/* Container for icons */
+.icons_container {
+  font-size: 3rem;
+  margin: 50px;
   display: flex;
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Styling for summary text */
+.summary_container { 
+  font-size: 1.2rem;
+  font-family: 'Ysabeau', sans-serif;
+}
 
+.name {
+  font-family: 'Allura', sans-serif;
+  font-size: 6rem;
+}
 
+.title {
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #232c6f;
+}
 
+/* General styling for elements with class 'bar' */
+.bar {
+  position: relative;
+  padding: 10px 0; 
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.9s ease-in-out;
+}
+
+.bar::before {
+  top: 0;
+}
+
+.bar::after {
+  bottom: 0;
+}
+
+.bar:hover::before,
+.bar:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Optional: Specific styling for button with bar-like effect */
+.bar_button {
+  position: relative;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+.bar_button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.bar_button:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.bar_button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
 
