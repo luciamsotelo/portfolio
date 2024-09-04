@@ -1,10 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
+import Portfolio from '../components/portfolio_cards'
 const portfolio_page = () => {
   return (
     <div>
-      <Header />
-      <h1>This is the Portfolio Page</h1>
+      < Header />
+      < Portfolio />
     </div>
   )
 }
