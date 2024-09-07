@@ -2,7 +2,7 @@
 
 /* Background gradient for the entire body */
 body {
-  background: linear-gradient(to right, #e5d3bb, #1c718e, #e5d3bb);
+  background: linear-gradient(to right, #1c718e, #e5d3bb, #1c718e);
   height: 100vh;
   width: 100%;
   margin: 0;

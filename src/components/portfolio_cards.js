@@ -8,7 +8,6 @@ import wardrobeImage from '../images/wiaw.jpeg';
 import sdcp from '../images/sdcp.jpeg';
 import packout from '../images/trpo.jpeg';
 
-
 function ProjectsShowcase() {
   const projects = [
     {
@@ -17,10 +16,10 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          Click 'Start' to reveal the card board. Select two cards at a time; if they match, they stay face up. If they don’t, they flip back to their original state. Track your time and moves as you play to monitor your progress and efficiency. <br></br><b>Technologies Used:<br></br></b> HTML | CSS | JavaScript.
+            Click 'Start' to reveal the card board. Select two cards at a time; if they match, they stay face up. If they don’t, they flip back to their original state. Track your time and moves as you play to monitor your progress and efficiency. <br></br><b>Technologies Used:<br></br></b> HTML | CSS | JavaScript.
           </p>
           <p className="text-center">
-            <a href="https://luciamsotelo.github.io/Milestone-Project-1/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://luciamsotelo.github.io/Milestone-Project-1/" target="_blank" rel="noopener noreferrer">
               View the game
             </a>
           </p>
@@ -32,15 +31,14 @@ function ProjectsShowcase() {
       image: wardrobeImage, 
       description: (
         <>
+          <p style={{ textAlign: 'justify', fontSize: '0.875rem', fontFamily: 'Ysabeau', fontStyle: 'italic'}}>Team project. Database inactive, May take a few seconds to load.</p>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          This project was designed for buying, selling, or gifting clothing. The app uses a database that allows users to upload and manage clothing items, seamlessly connecting the backend functionalities with the frontend for a smooth transaction process.
-          <br></br>
-          <b>Technologies Used:<br></br></b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | dotenv | Nodemon | Cors
-
+          This project enables buying, selling, and gifting clothing through a database for item uploads, integrating backend and frontend for smooth transactions and a seamless user experience.
+            <br></br>
+            <b>Technologies Used:<br></br></b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | dotenv | Nodemon | CORS
           </p>
-          
           <p className="text-center">
-            <a href="https://wear-it-again-wardrobe.onrender.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://wear-it-again-wardrobe.onrender.com" target="_blank" rel="noopener noreferrer">
               Wear It Again Wardrobe
             </a>
           </p>
@@ -53,13 +51,12 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          This app was created to provide a comprehensive guide to some of San Diego’s top beaches. With a focus on detailed descriptions and highlights of some of the most popular destinations in the city. We wanted to provide a seamless user experience in providing a detailed guide to San Diego’s top beaches.
-          <br></br>
-          <b>Technologies Used:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | Axios | Body Parser | dotenv | Nodemon | CORS
+          This app offers a detailed guide to some of San Diego’s top beaches, featuring comprehensive descriptions and highlights of popular destinations for a seamless user experience.
+            <br></br>
+            <b>Technologies Used:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | Axios | Body Parser | dotenv | Nodemon | CORS
           </p>
-          
           <p className="text-center">
-            <a href="https://sd-coastal-paradise.onrender.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://sd-coastal-paradise.onrender.com/" target="_blank" rel="noopener noreferrer">
               San Diego Coastal Paradise
             </a>
           </p>
@@ -72,12 +69,15 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          info on project
-          <br></br>
-          <b>Technologies Used:</b><br></br>React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library) </p>
+            This website was created to showcase the client's business, highlighting their services and offerings. It includes features that allow customers to easily contact the business through email and phone, providing a seamless communication experience.
+            <br></br>
+            <b>Technologies Used:</b><br></br>React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library)
+          </p>
           <p className="text-center">
-            <a href="https://www.therightpackout.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              The Right Packout</a></p>
+            <a href="https://www.therightpackout.com/" target="_blank" rel="noopener noreferrer">
+              The Right Packout
+            </a>
+          </p>
         </>
       ),
     },
@@ -87,27 +87,29 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          info on project
-          <br></br>
-          <b>Technologies Used:</b> </p>
+            info on project
+            <br></br>
+            <b>Technologies Used:</b> 
+          </p>
           <p className="text-center">
-            <a href="https://sd-coastal-paradise.onrender.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              BUTTON</a></p>
+            <a href="https://sd-coastal-paradise.onrender.com/" target="_blank" rel="noopener noreferrer">
+              BUTTON
+            </a>
+          </p>
         </>
       ),
     },
-  
   ];
 
   return (
     <Container className="my-5">
-      <h2 className="text-center mb-5">Projects</h2>
+      <h2 className="text-center mb-5" style={{color: '#1c718e', fontFamily: 'Ysabeau', fontSize: '4rem'}}>From Concepts to Code</h2>
       <Row className="justify-content-center">
         {projects.map((project, index) => (
           <Col xs={12} sm={6} md={4} lg={3} key={index} className="mb-4">
-            <Card className="h-100">
-              <Card.Img variant="top" src={project.image} className="img-fluid" />
-              <Card.Body>
+            <Card className="h-100" style={{ border: '6px solid #1c718e', width: '300px', height: '350px' }}>
+              <Card.Img variant="top" src={project.image} className="img-fluid" style={{ objectFit: 'cover', padding: '10px', height: '60%' }} />
+              <Card.Body style={{ height: '40%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Card.Title className="text-center">{project.title}</Card.Title>
                 <Card.Text>
                   {project.description}
