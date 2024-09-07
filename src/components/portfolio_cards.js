@@ -4,8 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import memoryGameImage from '../images/memorygame.jpg'; 
-import wardrobeImage from '../images/wiaw.png';
-import sdcp from '../images/sdcp_logo.jpg';
+import wardrobeImage from '../images/wiaw.jpeg';
+import sdcp from '../images/sdcp.jpeg';
+import packout from '../images/trpo.jpeg';
 
 
 function ProjectsShowcase() {
@@ -16,10 +17,10 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          Click 'Start' to reveal the card board. Select two cards at a time; if they match, they stay face up. If they don’t, they flip back to their original state. Track your time and moves as you play to monitor your progress and efficiency. <br></br><b>Technologies Used:</b> HTML | CSS | JavaScript.
+          Click 'Start' to reveal the card board. Select two cards at a time; if they match, they stay face up. If they don’t, they flip back to their original state. Track your time and moves as you play to monitor your progress and efficiency. <br></br><b>Technologies Used:<br></br></b> HTML | CSS | JavaScript.
           </p>
           <p className="text-center">
-            <a href="https://github.com/your_username/memory_game" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://luciamsotelo.github.io/Milestone-Project-1/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               View the game
             </a>
           </p>
@@ -32,14 +33,14 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          This project was designed for buying, selling, or gifting clothing. It creates an intuitive user experience. The app uses a database that allows users to upload and manage clothing items, seamlessly integrating backend functionalities with a user-friendly frontend for a smooth and efficient transaction process.
+          This project was designed for buying, selling, or gifting clothing. The app uses a database that allows users to upload and manage clothing items, seamlessly connecting the backend functionalities with the frontend for a smooth transaction process.
           <br></br>
-          <b>Technologies Used:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | dotenv | Nodemon | Cors
+          <b>Technologies Used:<br></br></b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | dotenv | Nodemon | Cors
 
           </p>
           
           <p className="text-center">
-            <a href="https://https://wear-it-again-api.onrender.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://wear-it-again-wardrobe.onrender.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Wear It Again Wardrobe
             </a>
           </p>
@@ -52,7 +53,7 @@ function ProjectsShowcase() {
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
-          This project was created to provide a comprehensive guide to San Diego’s top beaches. With a focus on detailed descriptions and highlights of some of the most popular destinations in the city. We wanted to provide a seamless user experience in providing a detailed guide to San Diego’s top beaches.
+          This app was created to provide a comprehensive guide to some of San Diego’s top beaches. With a focus on detailed descriptions and highlights of some of the most popular destinations in the city. We wanted to provide a seamless user experience in providing a detailed guide to San Diego’s top beaches.
           <br></br>
           <b>Technologies Used:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Express | Sequelize | PostgreSQL (pg) | Axios | Body Parser | dotenv | Nodemon | CORS
           </p>
@@ -66,17 +67,17 @@ function ProjectsShowcase() {
       ),
     },
     {
-      title: 'TITLE',
-      image: sdcp, 
+      title: 'The Right Packout',
+      image: packout, 
       description: (
         <>
           <p style={{ textAlign: 'justify', fontSize: '0.875rem' }}>
           info on project
           <br></br>
-          <b>Technologies Used:</b> </p>
+          <b>Technologies Used:</b><br></br>React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library) </p>
           <p className="text-center">
-            <a href="https://sd-coastal-paradise.onrender.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              BUTTON</a></p>
+            <a href="https://www.therightpackout.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              The Right Packout</a></p>
         </>
       ),
     },

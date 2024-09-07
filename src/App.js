@@ -6,6 +6,7 @@ import Collaboration from './pages/collab_page';
 import Contact from './pages/contact_page';
 import Portfolio from './pages/portfolio_page';
 import Hire from './pages/hire_page';
+
 function App() {
   return (
     <BrowserRouter>
