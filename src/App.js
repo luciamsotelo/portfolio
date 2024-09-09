@@ -1,17 +1,17 @@
-import './App.css';
-import {Route, BrowserRouter, Routes} from 'react-router-dom';
-import Home from './pages/home_page';
-import About from './pages/about_page';
-import Collaboration from './pages/collab_page';
-import Contact from './pages/contact_page';
-import Portfolio from './pages/portfolio_page';
-import Hire from './pages/hire_page';
+import './App.css'; // Ensure your CSS file is correctly placed and named
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import Home from './pages/home_page'; // Make sure this path is correct
+import About from './pages/about_page'; // Make sure this path is correct
+import Collaboration from './pages/collab_page'; // Make sure this path is correct
+import Contact from './pages/contact_page'; // Make sure this path is correct
+import Portfolio from './pages/portfolio_page'; // Make sure this path is correct
+import Hire from './pages/hire_page'; // Make sure this path is correct
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} /> {/* Default route */}
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/collaboration" element={<Collaboration />} />

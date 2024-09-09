@@ -69,7 +69,6 @@ const MainInfo = () => {
     <i className="devicon-python-plain colored icon-light-one m-2"></i>
   </Col>
 </Row>
-
     </Container>
   );
 }

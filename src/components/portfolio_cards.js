@@ -102,13 +102,13 @@ function ProjectsShowcase() {
   ];
 
   return (
-    <Container className="my-5">
+    <Container className="my-5" >
       <h2 className="text-center mb-5" style={{color: '#1c718e', fontFamily: 'Ysabeau', fontSize: '4rem'}}>From Concepts to Code</h2>
       <Row className="justify-content-center">
         {projects.map((project, index) => (
-          <Col xs={12} sm={6} md={4} lg={3} key={index} className="mb-4">
+          <Col xs={12} sm={6} md={4} lg={3} key={index} className="mb-4" style={{ display: 'flex', justifyContent: 'center' }}>
             <Card className="h-100" style={{ border: '6px solid #1c718e', width: '300px', height: '350px' }}>
-              <Card.Img variant="top" src={project.image} className="img-fluid" style={{ objectFit: 'cover', padding: '10px', height: '60%' }} />
+              <Card.Img variant="top" src={project.image} className="img-fluid" style={{ padding: '10px', height: '60%' }} />
               <Card.Body style={{ height: '40%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Card.Title className="text-center">{project.title}</Card.Title>
                 <Card.Text>

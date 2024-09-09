@@ -74,11 +74,11 @@ body {
   z-index: 1;
   font-size: inherit;
   font-family: inherit;
-  color: white;
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: hsl(236, 32%, 26%);
+  background-color: #1c718e !important;
+  color: #e5dbe5;
   overflow: hidden;
   transition: color 0.4s ease-in-out;
 }
@@ -100,10 +100,77 @@ body {
 
 .bar_button:hover {
   cursor: pointer;
-  color: #161616;
+  color: #161616 !important;
 }
 
 .bar_button:hover::before {
   transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
+/* Initially hide the cards */
+.myInfo {
+  opacity: 0; /* Hide cards */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap cards to the next line */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Show cards when the class 'show-cards' is added */
+.myInfo.show-cards {
+  opacity: 1; /* Show cards */
+}
+
+/* Keyframes for the landing animation */
+@keyframes land-animation {
+  0% {
+    transform: translateY(-50px) rotate(0deg); /* Start above and no tilt */
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg); /* Land at its place */
+  }
+  100% {
+    transform: translateY(0px); /* Stay in place */
+  }
+}
+
+/* Apply the landing animation to each card */
+.myInfo .card {
+  width: 200px; /* Fixed width for smaller cards */
+  height: 300px; /* Fixed height for smaller cards */
+  transform: translateY(-50px); /* Start above the screen */
+  animation: land-animation 1s ease-out forwards; /* Landing animation */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Tilt effects */
+.myInfo .card:nth-child(1) {
+  animation: land-animation 1s ease-out forwards;
+  transform: translateY(-50px) rotate(-5deg); /* Tilt to the left */
+}
+
+.myInfo .card:nth-child(2) {
+  animation: land-animation 1s ease-out forwards;
+  transform: translateY(-50px) rotate(5deg); /* Tilt to the right */
+}
+
+.myInfo .card:nth-child(3) {
+  animation: land-animation 1s ease-out forwards;
+  transform: translateY(-50px) rotate(0deg); /* No tilt */
+}
+
+/* Hover effect */
+.myInfo .card:hover {
+  transform: scale(1.2) rotate(0deg); /* Grow and straighten */
+  z-index: 1000; /* Ensure it is on top */
+  position: relative; /* Adjust positioning context */
+}
+
+/* Image styling inside cards */
+.myInfo .card img {
+  width: 100%; /* Make images responsive */
+  height: 150px; /* Set a fixed height for images */
+  object-fit: cover; /* Cover the card area */
+}

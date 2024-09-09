@@ -17,7 +17,7 @@ const Header = () => {
             <Nav.Link className="bar" href="/collaboration">Collaboration</Nav.Link>
             <Nav.Link className="bar" href="/contact">Contact</Nav.Link>
           </Nav>
-          <Button variant="outline-primary" className="bar_button" style={{color: '#8b4513'}} href="/hire">Hire Me</Button>
+          <Button variant="outline-primary" className="bar_button" style={{color: 'white', borderColor: '#1c718e'}} href="/hire">Hire Me</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

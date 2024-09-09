@@ -1,13 +1,14 @@
-import React from 'react'
-import Header from '../components/header'
+import React from 'react';
+import Header from '../components/header';
+import AboutMe from '../components/about_me';
 
-const about_page = () => {
+const AboutPage = () => {
   return (
     <div>
       <Header />
-      <h1>This is the About Page</h1>
+      <AboutMe />
     </div>
-  )
-}
+  );
+};
 
-export default about_page
+export default AboutPage;
