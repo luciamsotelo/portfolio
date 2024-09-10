@@ -107,70 +107,120 @@ body {
   transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
-/* Initially hide the cards */
-.myInfo {
-  opacity: 0; /* Hide cards */
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
-  display: flex; /* Flexbox layout */
-  flex-wrap: wrap; /* Wrap cards to the next line */
-  gap: 20px; /* Space between cards */
-  justify-content: center; /* Center cards horizontally */
-}
-
-/* Show cards when the class 'show-cards' is added */
-.myInfo.show-cards {
-  opacity: 1; /* Show cards */
-}
-
-/* Keyframes for the landing animation */
-@keyframes land-animation {
-  0% {
-    transform: translateY(-50px) rotate(0deg); /* Start above and no tilt */
+/* Define the animation for the cards */
+/* Define the keyframes for the animation */
+/* Define the keyframes for the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  50% {
-    transform: translateY(0px) rotate(0deg); /* Land at its place */
-  }
-  100% {
-    transform: translateY(0px); /* Stay in place */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Apply the landing animation to each card */
-.myInfo .card {
-  width: 200px; /* Fixed width for smaller cards */
-  height: 300px; /* Fixed height for smaller cards */
-  transform: translateY(-50px); /* Start above the screen */
-  animation: land-animation 1s ease-out forwards; /* Landing animation */
-  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-  overflow: hidden; /* Hide overflow */
+/* Define the keyframes for tilting */
+@keyframes tiltLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-8deg);
+  }
 }
 
-/* Tilt effects */
-.myInfo .card:nth-child(1) {
-  animation: land-animation 1s ease-out forwards;
-  transform: translateY(-50px) rotate(-5deg); /* Tilt to the left */
+@keyframes tiltRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
 }
 
-.myInfo .card:nth-child(2) {
-  animation: land-animation 1s ease-out forwards;
-  transform: translateY(-50px) rotate(5deg); /* Tilt to the right */
+@keyframes tiltSlightly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
 }
 
-.myInfo .card:nth-child(3) {
-  animation: land-animation 1s ease-out forwards;
-  transform: translateY(-50px) rotate(0deg); /* No tilt */
+/* Apply animation to the cards */
+.dog-card,
+.family-card,
+.fandb-card,
+.community-card {
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
 }
 
-/* Hover effect */
-.myInfo .card:hover {
-  transform: scale(1.2) rotate(0deg); /* Grow and straighten */
-  z-index: 1000; /* Ensure it is on top */
-  position: relative; /* Adjust positioning context */
+/* Specific tilting and staggering for each card */
+.dog-card {
+  animation-delay: 0.5s;
+  animation-name: fadeInUp, tiltLeft;
 }
 
-/* Image styling inside cards */
-.myInfo .card img {
-  width: 100%; /* Make images responsive */
-  height: 150px; /* Set a fixed height for images */
-  object-fit: cover; /* Cover the card area */
+.family-card {
+  animation-delay: 1s;
+  animation-name: fadeInUp, tiltRight;
+}
+
+.fandb-card {
+  animation-delay: 1.5s;
+  animation-name: fadeInUp, tiltLeft;
+}
+
+.community-card {
+  animation-delay: 2s;
+  animation-name: fadeInUp, tiltSlightly;
+}
+
+/* App.css */
+
+/* Style for PartnerSection */
+.carlos {
+  font-family: 'Allura', sans-serif;
+  font-size: 3rem !important;
+  color: #232c6f;
+}
+
+.btn {
+  font-size: 1.2rem;
+}
+
+.btn svg {
+  font-size: 1.5rem;
+}
+
+/* WordCloud.css */
+.word-cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.word {
+  position: absolute;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+  font-size: 1.5rem;
+  color: #fff; /* Change as needed */
+  white-space: nowrap; /* Ensure words don't break into multiple lines */
+}
+
+/* Optional: Add a box shadow for better readability */
+.word {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.word:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
