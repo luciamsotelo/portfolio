@@ -1,10 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
+import Contact from '../components/contact'
 const contact_page = () => {
   return (
     <div>
       <Header />
-      <h1>This is the Contact Page</h1>
+      <Contact />
     </div>
   )
 }

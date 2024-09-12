@@ -4,8 +4,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   overflow: hidden; /* Ensures words don't go outside the container */
   z-index: -1; /* Make sure the word cloud is behind other content */
@@ -44,7 +44,7 @@
 }
 
 .floating-word {
-  animation: slideBounce 30s ease-in-out infinite;
+  animation: slideBounce 10s ease-in-out infinite;
 }
 
 

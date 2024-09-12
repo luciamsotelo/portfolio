@@ -1,0 +1,73 @@
+.card-custom {
+  border: 10px groove #1c718e;
+  width: 100%;
+  max-width: 20rem; /* Maximum width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.card-custom:hover {
+  transform: scale(1.2); /* Scale up on hover */
+  box-shadow: 0px 8px 30px rgba(255, 105, 180, 0.9); /* Pink shadow on hover */
+  z-index: 10;
+}
+
+.card-img-custom {
+  padding: 10px;
+  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Ensure image fits the card width */
+}
+
+.card-body-custom {
+  height: auto; /* Adjust height to content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title-custom {
+  color: #1c718e;
+  font-family: 'Ysabeau', sans-serif;
+}
+
+.card-description {
+  text-align: justify;
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .card-custom {
+    max-width: 18rem; /* Adjust max width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-custom {
+    max-width: 16rem; /* Adjust max width for smaller screens */
+  }
+
+  .card-title-custom {
+    font-size: 1.5rem; /* Adjust title size on smaller screens */
+  }
+
+  .card-description {
+    font-size: 0.75rem; /* Adjust description size on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-custom {
+    max-width: 14rem; /* Further adjust max width for mobile screens */
+  }
+
+  .card-title-custom {
+    font-size: 1.25rem; /* Further adjust title size on mobile screens */
+  }
+
+  .card-description {
+    font-size: 0.65rem; /* Further adjust description size on mobile screens */
+  }
+}
