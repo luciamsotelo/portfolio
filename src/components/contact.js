@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa'; // Import React icons
 import { send } from '@emailjs/browser'; // Updated import
 import '../styles/contact_page.css';
 
@@ -48,11 +49,11 @@ function ContactPage() {
   };
 
   return (
-    <Container className="contact-container my-5">
+    <Container className="contact-container my-5" style={{border: '10px solid #1c718e', borderRadius: '1px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',backgroundColor: 'rgb(234, 221, 207)'}}>
       <Row className="justify-content-center">
         <Col xs={12} md={8} lg={6}>
-          <h1 className="text-center contact-title">Let's Get in Touch!</h1>
-          <p className="text-center contact-subtitle">We’d love to hear from you. Drop us a message and we’ll get back to you as soon as possible!</p>
+          <h1 className="text-center contact-title" style={{fontFamily: 'ysabeau, cursive', fontSize: '3.5rem', textShadow: '2px 2px #7F00FF'}}>Let's Collaborate!</h1>
+          <p className="text-center contact-subtitle">I’d love to hear from you! Whether you’re part of a company looking for a skilled developer or an individual seeking web design services, feel free to reach out. Drop me a message, and I’ll get back to you as soon as possible!</p>
           <Form className="contact-form" onSubmit={handleSubmit}>
             <Form.Group controlId="formName">
               <Form.Label>Your Name</Form.Label>
@@ -88,11 +89,64 @@ function ContactPage() {
                 required 
               />
             </Form.Group>
-            <Button variant="primary" type="submit" className="w-100 contact-button">
-              Send Message
+            <Button variant="primary" type="submit" className="w-100 contact-button"style={({ marginTop: '20px' })}>
+              Let's Build Together
             </Button>
           </Form>
           {status && <p className="text-center mt-3">{status}</p>}
+        </Col>
+      </Row>
+
+      {/* Contact Information Section */}
+      <Row className="justify-content-center mt-5">
+        <Col xs={12} md={8} lg={6}>
+          <h3 className="text-center" style={{color: '#e5d3bb', fontFamily: 'ysabeau, cursive', fontSize: '3.5rem', textShadow: '2px 2px #7F00FF'}}>My Contact Information</h3>
+          <Row className="g-3">
+            {/* Email */}
+            <Col xs={12} md={6}>
+              <Button 
+                variant="outline-primary" 
+                href="mailto:youremail@example.com" 
+                className="w-100"
+              >
+                <FaEnvelope className="me-2" /> Email: luciamsotelo@yahoo.com
+              </Button>
+            </Col>
+            {/* Phone Number */}
+            <Col xs={12} md={6}>
+              <Button 
+                variant="outline-success" 
+                href="tel:+1234567890" 
+                className="w-100"
+              >
+                <FaPhone className="me-2" /> Phone: (619) 343-3533
+              </Button>
+            </Col>
+          </Row>
+          <Row className="g-3 mt-3">
+            {/* GitHub */}
+            <Col xs={12} md={6}>
+              <Button 
+                variant="outline-dark" 
+                href="https://github.com/luciamsotelo" 
+                target="_blank" 
+                className="w-100"
+              >
+                <FaGithub className="me-2" /> GitHub: luciamsotelo
+              </Button>
+            </Col>
+            {/* LinkedIn */}
+            <Col xs={12} md={6}>
+              <Button 
+                variant="outline-info" 
+                href="https://www.linkedin.com/in/lucia-sotelo/" 
+                target="_blank" 
+                className="w-100"
+              >
+                <FaLinkedin className="me-2" /> LinkedIn: lucia-sotelo
+              </Button>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Container>

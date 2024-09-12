@@ -28,8 +28,8 @@ const PartnerSection = () => {
                   color: 'white'
                 }}
               >
-                <Card.Title className="mb-4" style={{ fontFamily: 'Allura, cursive', fontSize: '3.5rem' }}>Project Partner</Card.Title>
-                <h3 className="mb-4" style={{ fontFamily: 'Ysabeau, sans-serif' }}>Carlos Hernandez</h3>
+                <Card.Title className="mb-4" style={{ fontFamily: 'ysabeau, cursive', fontSize: '3.5rem', textShadow: '2px 2px #7F00FF' }}>Project Partner</Card.Title>
+                <h3 className="mb-4" style={{ fontFamily: 'allura, sans-serif', fontSize: '3rem' }}>Carlos Hernandez</h3>
                 <Row className="g-3">
                   {/* Email */}
                   <Col xs={12} md={6}>
