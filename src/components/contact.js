@@ -169,7 +169,7 @@ function ContactPage() {
             {/* Email */}
             <Col xs={12}>
               <Button
-                variant="outline-primary"
+                variant="outline-secondary"
                 href="mailto:luciamsotelo@yahoo.com"
                 className="w-100"
                 style={{ marginTop: "-10px", marginBottom: "1px" }}
@@ -203,7 +203,7 @@ function ContactPage() {
             {/* LinkedIn */}
             <Col xs={12}>
               <Button
-                variant="outline-info"
+                variant="outline-primary"
                 href="https://www.linkedin.com/in/lucia-sotelo/"
                 target="_blank"
                 className="w-100"
