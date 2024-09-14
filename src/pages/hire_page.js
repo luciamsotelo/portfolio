@@ -1,10 +1,12 @@
 import React from 'react'
 import Header from '../components/header'
+import Hire from '../components/hire'
+
 const hire_page = () => {
   return (
     <div>
       <Header />
-      <h1>hire me page</h1>
+      <Hire />
     </div>
   )
 }

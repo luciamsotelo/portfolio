@@ -1,0 +1,34 @@
+/* Ensure skill cards are consistently sized and centered */
+.skill-card {
+  width: 100%; /* Full width within column */
+  max-width: 250px; /* Maximum width */
+  height: 200px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #333; /* Dark background color by default */
+  color: white; /* Light text color by default */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for scaling, background color and text color */
+.skill-card:hover {
+  transform: scale(1.75); /* Slightly enlarge */
+  box-shadow: 0 20px 60px rgba(229, 156, 20, 0.9); /* Add shadow */
+  background-color: white; /* Light background on hover */
+  color: #333; /* Dark text color on hover */
+  text-align: center;
+  z-index: 1; /* Bring card above others */
+}
+
+/* Responsive adjustments for the card wrapper */
+@media (max-width: 576px) {
+  .skill-card-wrapper {
+    display: flex;
+    justify-content: center; /* Center align */
+    align-items: center; /* Center vertically */
+  }
+}
