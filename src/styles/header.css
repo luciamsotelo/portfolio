@@ -1,0 +1,127 @@
+/* Import YSabeau font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=YSabeau:wght@400;700&display=swap');
+
+/* General styling for the header */
+.header {
+  background-color: #d2b48c; /* Light tan background color */
+  color: #8b4513; /* Dark brown text color */
+  font-family: 'YSabeau', sans-serif; /* Apply YSabeau font */
+}
+
+/* Ensure the navbar items are visible */
+.navbar-nav .nav-link {
+  color: #8b4513; /* Dark brown color for text */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1c718e; /* Change color on hover */
+}
+
+/* Style for navbar toggle button on smaller screens */
+.navbar-toggler {
+  border-color: #1c718e; /* Customize the border color */
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"%3E%3Cpath stroke="%231c718e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /%3E%3C/svg%3E');
+}
+
+
+/* Ensure the button is visible on smaller screens */
+.bar_button {
+  color: white;
+  border-color: #1c718e; /* Customize border color */
+  background-color: #1c718e; /* Match button background with border */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.bar_button:hover {
+  background-color: #8b4513; /* Change background color on hover */
+  color: white; /* Ensure text color is white on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center; /* Center align nav items on smaller screens */
+    padding-top: 1rem; /* Add padding to the top */
+  }
+
+  .nav-link {
+    padding: 0.5rem; /* Add padding for better spacing */
+  }
+}
+
+/* General styling for elements with class 'bar' */
+.bar {
+  position: relative;
+  padding: 10px 0; 
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 25%;
+  height: 2px;
+  background-color: #3cefff; /* Accent color */
+  transform-origin: center;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.bar::before {
+  top: 0;
+}
+
+.bar::after {
+  bottom: 0;
+}
+
+.bar:hover::before,
+.bar:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Optional: Specific styling for button with bar-like effect */
+.bar_button {
+  position: relative;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: #1c718e;
+  color: #e5dbe5;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.bar_button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.bar_button:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.bar_button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}

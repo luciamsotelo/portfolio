@@ -18,7 +18,7 @@ const MainInfo = () => {
             </div>
           </div>
           {/* Buttons updated below */}
-          <div className="mt-3" style={{display: 'flex', justifyContent: 'center'}}>
+          <div className="mt-3 mb-3" style={{display: 'flex', justifyContent: 'center'}}>
             <Button 
               style={{ backgroundColor: '#d2b48c', color: '#8b4513', borderColor: '#8b4513' }} 
               href="/portfolio" 
