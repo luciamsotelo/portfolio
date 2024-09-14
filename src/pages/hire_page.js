@@ -4,7 +4,7 @@ const hire_page = () => {
   return (
     <div>
       <Header />
-      <h1>This is the Hire Page</h1>
+      <h1>hire me page</h1>
     </div>
   )
 }
