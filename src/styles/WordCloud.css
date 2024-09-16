@@ -11,23 +11,37 @@
   z-index: -1; /* Ensure the word cloud is behind other content */
 }
 
-/* Mobile-friendly adjustments */
+/* General floating word style */
+.floating-word {
+  position: absolute;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+  font-size: 6vw; /* Make font-size responsive to viewport */
+  color: #fff;
+  white-space: nowrap; 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Adds readability */
+}
+
+/* Mobile-friendly adjustments for smaller devices */
 @media (max-width: 768px) {
   .floating-word {
     font-size: 4vw; /* Responsive font size for mobile */
   }
 }
 
-.floating-word {
-  position: absolute;
-  opacity: 0.7;
-  transition: transform 0.3s, opacity 0.3s;
-  font-size: 6vw; /* Make font-size responsive to viewport */
-  color: #fff; 
-  white-space: nowrap; 
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Adds readability */
+/* Landscape mode adjustments for better coverage */
+@media (orientation: landscape) {
+  .word-cloud-container {
+    width: 100vw;
+    height: 100vh; /* Ensure the container covers the whole page */
+  }
+
+  .floating-word {
+    font-size: 5vw; /* Adjust size for landscape */
+  }
 }
 
+/* Slide bounce animation */
 @keyframes slideBounce {
   0% {
     transform: translateX(-100%) translateY(0);

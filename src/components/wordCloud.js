@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/WordCloud.css'; // Ensure this path is correct
 
 const words = [
@@ -24,15 +24,14 @@ const words = [
 
 const getRandomPosition = () => {
   return {
-    top: `${Math.random() * 90}vh`, // Adjust to better fit on the screen
-    left: `${Math.random() * 90}vw` // Prevents overflow
+    top: `${Math.random() * 100}vh`, // Use viewport height to make it more adaptable
+    left: `${Math.random() * 100}vw` // Use viewport width for horizontal position
   };
 };
 
-const getRandomSize = () => {
-  // Use relative units like 'vw' for more flexibility on different screen sizes
-  const minSize = window.innerWidth <= 768 ? 10 : 20; // Smaller words for smaller screens
-  const maxSize = window.innerWidth <= 768 ? 30 : 50; // Limit the maximum size
+const getRandomSize = (windowWidth) => {
+  const minSize = windowWidth <= 768 ? 10 : 20; // Smaller words for smaller screens
+  const maxSize = windowWidth <= 768 ? 30 : 50; // Limit the maximum size
   return `${Math.random() * (maxSize - minSize) + minSize}px`;
 };
 
@@ -46,6 +45,14 @@ const getRandomColor = () => {
 };
 
 const WordCloud = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="word-cloud-container">
       {words.map((word, index) => {
@@ -57,7 +64,7 @@ const WordCloud = () => {
             style={{
               top: position.top,
               left: position.left,
-              fontSize: getRandomSize(),
+              fontSize: getRandomSize(windowWidth),
               color: getRandomColor()
             }}
           >
