@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/mainInfo_page.css';
 
 // Updated import path for the image
 import headshot from '../images/headshot2.png';

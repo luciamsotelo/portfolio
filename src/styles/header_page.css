@@ -125,3 +125,11 @@
 .bar_button:hover::before {
   transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
+
+/* Styling for navbar */
+.navbar {
+  background-color: #1c718e;
+  color: #e5d3bb;
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 1.25rem;
+}

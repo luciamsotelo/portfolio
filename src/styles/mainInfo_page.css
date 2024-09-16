@@ -1,0 +1,19 @@
+
+/* Styling for summary text */
+.summary_container { 
+  font-size: 1.2rem;
+  font-family: 'Ysabeau', sans-serif;
+}
+
+.name {
+  font-family: 'Allura', sans-serif;
+  font-size: 6rem;
+}
+
+.title {
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #232c6f;
+}

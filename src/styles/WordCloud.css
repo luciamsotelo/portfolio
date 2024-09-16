@@ -48,6 +48,20 @@
 }
 
 
+/* Style for PartnerSection */
+.carlos {
+  font-family: 'Allura', sans-serif;
+  font-size: 3rem !important;
+  color: #232c6f;
+}
+
+.btn {
+  font-size: 1.2rem;
+}
+
+.btn svg {
+  font-size: 1.5rem;
+}
 
 
 

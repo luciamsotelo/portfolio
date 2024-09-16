@@ -7,6 +7,7 @@ import pets from '../images/pets.jpeg';
 import wineTasting from '../images/tasting.jpeg';
 import ocean from '../images/ocean.jpeg';
 import { Card } from 'react-bootstrap';
+import "../styles/aboutme_page.css";
 
 
 function AboutPage() {

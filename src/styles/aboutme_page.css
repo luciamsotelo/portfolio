@@ -1,0 +1,85 @@
+
+/* Apply animation to the cards */
+.dog-card,
+.family-card,
+.fandb-card,
+.community-card, 
+.evolving-card,
+.hobbies-card
+{
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Specific tilting and staggering for each card */
+.dog-card {
+  animation-delay: 0.5s;
+  animation-name: fadeInUp, tiltLeft;
+}
+
+.family-card {
+  animation-delay: 1s;
+  animation-name: fadeInUp, tiltRight;
+}
+
+.fandb-card {
+  animation-delay: 1.5s;
+  animation-name: fadeInUp, tiltLeft;
+}
+
+.community-card {
+  animation-delay: 2s;
+  animation-name: fadeInUp, tiltSlightly;
+}
+
+.evolving-card {
+  animation-delay: 2.5s;
+  animation-name: fadeInUp;
+}
+
+.hobbies-card {
+  animation-delay: 3ms;
+  animation-name: fadeInUp, tiltLeft;
+}
+
+
+/* Define the animation for the cards */
+/* Define the keyframes for the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Define the keyframes for tilting */
+@keyframes tiltLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes tiltRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes tiltSlightly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
