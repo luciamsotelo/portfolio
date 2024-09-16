@@ -24,13 +24,16 @@ const words = [
 
 const getRandomPosition = () => {
   return {
-    top: `${Math.random() * 100}vh`, // Use viewport height to make it more adaptable
-    left: `${Math.random() * 100}vw` // Use viewport width for horizontal position
+    top: `${Math.random() * 90}vh`, // Adjust to better fit on the screen
+    left: `${Math.random() * 90}vw` // Prevents overflow
   };
 };
 
 const getRandomSize = () => {
-  return `${Math.random() * 15 + 20}px`; // Ensure font size is legible
+  // Use relative units like 'vw' for more flexibility on different screen sizes
+  const minSize = window.innerWidth <= 768 ? 10 : 20; // Smaller words for smaller screens
+  const maxSize = window.innerWidth <= 768 ? 30 : 50; // Limit the maximum size
+  return `${Math.random() * (maxSize - minSize) + minSize}px`;
 };
 
 const getRandomColor = () => {

@@ -8,18 +8,26 @@
   height: 100vh;
   pointer-events: none;
   overflow: hidden; /* Ensures words don't go outside the container */
-  z-index: -1; /* Make sure the word cloud is behind other content */
+  z-index: -1; /* Ensure the word cloud is behind other content */
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .floating-word {
+    font-size: 4vw; /* Responsive font size for mobile */
+  }
 }
 
 .floating-word {
   position: absolute;
   opacity: 0.7;
   transition: transform 0.3s, opacity 0.3s;
-  font-size: 6rem;
-  color: #fff; /* You can change the color as needed */
-  white-space: nowrap; /* Prevents words from breaking into multiple lines */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Optional: Adds readability */
+  font-size: 6vw; /* Make font-size responsive to viewport */
+  color: #fff; 
+  white-space: nowrap; 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Adds readability */
 }
+
 @keyframes slideBounce {
   0% {
     transform: translateX(-100%) translateY(0);
@@ -46,25 +54,3 @@
 .floating-word {
   animation: slideBounce 10s ease-in-out infinite;
 }
-
-
-/* Style for PartnerSection */
-.carlos {
-  font-family: 'Allura', sans-serif;
-  font-size: 3rem !important;
-  color: #232c6f;
-}
-
-.btn {
-  font-size: 1.2rem;
-}
-
-.btn svg {
-  font-size: 1.5rem;
-}
-
-
-
-
-
-
