@@ -13,6 +13,7 @@ import '../styles/portfolio_cards.css';
 
 function ProjectsShowcase() {
   const projects = [
+    // Projects data remains the same
     {
       title: 'MEMORY GAME',
       image: memoryGameImage,
@@ -87,11 +88,11 @@ function ProjectsShowcase() {
       description: (
         <>
           <p className="card-description">
-  This App is a vanishing message web application designed to provide a seamless and secure way for users to send and receive temporary messages. A unique code is generated and can be shared with the recipient. Once the code is entered, the hidden message appears briefly before disappearing within seconds, ensuring privacy and confidentiality.<br />
-  <b style={{ fontSize: "1rem", color: "blue"}}>Technologies Used:</b><br />
-  <b>Frontend:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Testing Library (Jest, React Testing Library)<br />
-  <b>Backend:</b> Express | Sequelize | PostgreSQL | dotenv | cors | nodemon
-</p>
+            This App is a vanishing message web application designed to provide a seamless and secure way for users to send and receive temporary messages. A unique code is generated and can be shared with the recipient. Once the code is entered, the hidden message appears briefly before disappearing within seconds, ensuring privacy and confidentiality.<br />
+            <b style={{ fontSize: "1rem", color: "blue"}}>Technologies Used:</b><br />
+            <b>Frontend:</b> React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | Testing Library (Jest, React Testing Library)<br />
+            <b>Backend:</b> Express | Sequelize | PostgreSQL | dotenv | cors | nodemon
+          </p>
           <p className="text-center">
             <a href="https://egghunt.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="View TITLE">
               Vanishing Note Webpage
@@ -106,13 +107,12 @@ function ProjectsShowcase() {
       description: (
         <>
           <p className="card-description">
-  This website was created to distribute products, showcasing their product range and allowing customers to place orders or make inquiries with ease.<br />
-  <b style={{ fontSize: "1rem", color: "blue"}}>Technologies Used:</b><br />
-  React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library)
-</p>
-
+            This website was created to distribute products, showcasing their product range and allowing customers to place orders or make inquiries with ease.<br />
+            <b style={{ fontSize: "1rem", color: "blue"}}>Technologies Used:</b><br />
+            React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library)
+          </p>
           <p className="text-center">
-            <a href="https://luciamsotelo.github.io/Milestone-Project-1/" target="_blank" rel="noopener noreferrer" aria-label="View Memory Game">
+            <a href="https://northstar-distributors-jfe5.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="View Northstar Distributors">
               Northstar Distributors Webpage
             </a>
           </p>

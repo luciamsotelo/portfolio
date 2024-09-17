@@ -42,37 +42,4 @@
 
 
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .card-custom {
-    max-width: 20rem; /* Adjust max width for medium-sized screens */
-  }
-}
 
-@media (max-width: 768px) {
-  .card-custom {
-    max-width: 18rem; /* Adjust max width for smaller screens */
-  }
-
-  .card-title-custom {
-    font-size: 1.5rem; /* Adjust title size on smaller screens */
-  }
-
-  .card-description {
-    font-size: 0.75rem; /* Adjust description size on smaller screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .card-custom {
-    max-width: 16rem; /* Further adjust max width for mobile screens */
-  }
-
-  .card-title-custom {
-    font-size: 1.25rem; /* Further adjust title size on mobile screens */
-  }
-
-  .card-description {
-    font-size: 0.65rem; /* Further adjust description size on mobile screens */
-  }
-}
