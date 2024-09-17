@@ -123,7 +123,7 @@ function ProjectsShowcase() {
 
   return (
     <Container className="my-5">
-      <h1 className="title text-center mb-5 card-title-custom" style={{ textAlign: 'center', fontSize: '3rem', color: '#1c718d', textShadow: '2px 2px #edf2f4' }}>From Concepts to Code</h1>
+      <h1 className="title text-center mb-5 card-title-custom" style={{ textAlign: 'center', fontSize: '3rem', color: '#1c718d', textShadow: '2px 2px #edf2f4'}}>From Concepts to Code</h1>
       <Row className="justify-content-center">
         {projects.map((project, index) => (
           <Col xs={12} sm={6} md={4} lg={3} key={index} className="mb-4 d-flex justify-content-center">
