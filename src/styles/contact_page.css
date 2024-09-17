@@ -1,3 +1,4 @@
+/* Container for the contact page */
 .contact-container {
   background-color: #f8f9fa;
   padding: 2rem;
@@ -6,6 +7,7 @@
   animation: fadeIn 2s ease-in;
 }
 
+/* Title styling */
 .contact-title {
   color: #1c718e;
   font-size: 2.5rem;
@@ -15,6 +17,7 @@
   animation: bounce 2s infinite;
 }
 
+/* Subtitle styling */
 .contact-subtitle {
   color: #333;
   font-size: 1.1rem;
@@ -22,6 +25,7 @@
   padding: 10px 50px;
 }
 
+/* Form container styling */
 .contact-form {
   background-color: #fff;
   padding: 1.5rem;
@@ -29,17 +33,20 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Form control styling */
 .contact-form .form-control {
   border-radius: 5px;
   border: 2px solid #1c718e;
   transition: border-color 0.3s;
 }
 
+/* Focused form control styling */
 .contact-form .form-control:focus {
   border-color: #ff33a1;
   box-shadow: 0 0 0 0.2rem rgba(255, 33, 161, 0.25);
 }
 
+/* Button styling */
 .contact-button {
   background-color: #1c718e;
   border: none;
@@ -48,130 +55,63 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
+/* Button hover effect */
 .contact-button:hover {
   background-color: #ff33a1;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 33, 161, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Keyframes for fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* Keyframes for fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-
-/* Messages styling */
+/* Container for fading messages */
 .messages {
-  position: relative;
-  height: 2.5rem; /* Default for larger screens */
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100px; /* Adjust based on your design */
   overflow: hidden;
+  text-align: center;
+  position: relative;
 }
 
+/* Individual message styling */
 .message {
   position: absolute;
   width: 100%;
+  color: #ff33a1; /* Hot pink color */
+  font-family: 'Allura', cursive;
+  font-size: 2rem; /* Adjust based on your design */
   opacity: 0;
-  transition: opacity 3s ease-in-out;
+  animation: fadeIn 3s ease-in-out, fadeOut 3s ease-in-out;
+  display: flex;
+  justify-content: center; /* Horizontally center text within the message */
+  align-items: center; /* Vertically center text within the message */
 }
 
+/* Animation for the current message */
 .fade-in {
-  opacity: 1;
+  animation: fadeIn 3s ease-in-out forwards;
 }
 
+/* Animation for other messages */
 .fade-out {
-  opacity: 0;
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-/* Media Queries for Responsiveness */
-
-/* Mobile phones */
-@media (max-width: 576px) {
-  .contact-title {
-    font-size: 1.8rem;
-  }
-
-  .contact-subtitle {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  .messages {
-    height: 2rem; /* Reduced height for smaller screens */
-  }
-
-  .message {
-    font-size: 0.85rem; /* Smaller font for messages */
-  }
-}
-
-/* Tablets */
-@media (min-width: 577px) and (max-width: 768px) {
-  .contact-title {
-    font-size: 2.2rem;
-  }
-
-  .contact-subtitle {
-    font-size: 1rem;
-    margin-top: -75px ;
-    padding: 10px 30px;
-  }
-
-  .messages {
-    height: 2.2rem;
-  }
-
-  .message {
-    font-size: 2rem;
-    font-family: 'Allura', sans-serif;
-  ;
-  }
-}
-
-/* Large screens */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .contact-title {
-    font-size: 2.3rem;
-  }
-
-  .contact-subtitle {
-    font-size: 1.05rem;
-    padding: 10px 40px;
-  }
-
-  .messages {
-    height: 2.4rem;
-  }
-
-  .message {
-    font-size: 1.9rem;
-  }
-}
-
-/* Extra large screens */
-@media (min-width: 1201px) {
-  .contact-title {
-    font-size: 2.5rem;
-  }
-
-  .contact-subtitle {
-    font-size: 3%;
-    padding: 10px 50px;
-  }
-
-  .messages {
-    height: 2.5rem;
-  }
-
-  .message {
-    font-size: 1.1rem;
-  }
+  animation: fadeOut 3s ease-in-out forwards;
 }
