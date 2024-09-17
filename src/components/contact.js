@@ -213,8 +213,8 @@ function ContactPage() {
               </Button>
             </Col>
             {/* Random Messages Section */}
-            <Col xs={12} className="my-4" style={{ padding: "45px"}}>
-              <div className="messages" style={{ textAlign: "center", fontSize: "2.5rem", fontFamily: "allura, cursive", color: "hotpink", textShadow: "1px 1px white" }}>
+            <Col xs={12} className="my-4" style={{}}>
+              <div className="messages" style={{ textAlign: "center", marginTop: "40px", fontFamily: "allura, cursive", color: "hotpink", textShadow: "1px 1px white" }}>
                 {messages.map((message, index) => (
                   <p key={index} className={`message ${getMessageClass(index)}`}>
                     {message}
@@ -224,7 +224,7 @@ function ContactPage() {
             </Col>
           </Row>
         </Col>
-        <p className="text-center contact-subtitle" style={{padding: "1px 50px", fontFamily: "ysabeau, cursive", fontSize: "1.5rem"}}>
+        <p className="text-center contact-subtitle" style={{paddingLeft: "50px", fontFamily: "ysabeau, cursive", fontSize: "1.5rem"}}>
           I’d love to hear from you! Whether you’re part of a company looking
           for a skilled developer or an individual seeking web design services,
           feel free to reach out. Drop me a message, and I’ll get back to you as

@@ -19,7 +19,7 @@
   color: #333;
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  padding: 10px 50px; /* Padding added for consistency */
+  padding: 10px 50px;
 }
 
 .contact-form {
@@ -64,9 +64,10 @@
   50% { transform: translateY(-10px); }
 }
 
+/* Messages styling */
 .messages {
   position: relative;
-  height: 2.5rem; /* Adjust based on your text size */
+  height: 2.5rem; /* Default for larger screens */
   overflow: hidden;
 }
 
@@ -85,12 +86,92 @@
   opacity: 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .messages {
+    height: 2rem; /* Reduced height for smaller screens */
+  }
+
+  .message {
+    font-size: 0.85rem; /* Smaller font for messages */
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-top: -75px ;
+    padding: 10px 30px;
+  }
+
+  .messages {
+    height: 2.2rem;
+  }
+
+  .message {
+    font-size: 2rem;
+    font-family: 'Allura', sans-serif;
+  ;
+  }
+}
+
+/* Large screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.05rem;
+    padding: 10px 40px;
+  }
+
+  .messages {
+    height: 2.4rem;
+  }
+
+  .message {
+    font-size: 1.9rem;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1201px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 3%;
+    padding: 10px 50px;
+  }
+
+  .messages {
+    height: 2.5rem;
+  }
+
+  .message {
+    font-size: 1.1rem;
+  }
 }
