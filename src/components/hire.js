@@ -100,7 +100,7 @@ const Hire = () => {
             variant="dark"
             href="https://github.com/luciamsotelo"
             target="_blank"
-            className="me-3"
+            className="me-3 mb-3"
           >
             Check Out My GitHub
           </Button>
@@ -108,7 +108,7 @@ const Hire = () => {
             variant="info"
             href="https://www.linkedin.com/in/lucia-sotelo/"
             target="_blank"
-            className="me-3"
+            className="me-3 mb-3"
           >
             Connect With LinkedIn
           </Button>
