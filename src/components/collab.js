@@ -3,13 +3,12 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FaGithub, FaEnvelope, FaPhone, FaLink } from 'react-icons/fa'; // Ensure to install react-icons
 import Carlos from '../images/carlos-portfolio.png'; // Path to your image
-import WordCloud from './wordCloud'; // Import the WordCloud component
 import '../styles/collab_page.css';
 
 const PartnerSection = () => {
   return (
     <div className="mt-5">
-      <Container className="p-4" style={{ margin: '225px auto' , borderRadius: '10px' }}>
+      <Container className="p-4" style={{ margin: '20px auto' , borderRadius: '10px' }}>
         <Row className="justify-content-center">
           <Col md={8} lg={6}>
             <Card 
@@ -82,7 +81,6 @@ const PartnerSection = () => {
           </Col>
         </Row>
       </Container>
-      <WordCloud /> {/* Add the WordCloud component here */}
     </div>
   );
 }
