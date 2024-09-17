@@ -1,19 +1,149 @@
-
 /* Styling for summary text */
-.summary_container { 
+.summary_container {
   font-size: 1.2rem;
   font-family: 'Ysabeau', sans-serif;
+  text-align: justify;
 }
 
+/* Name styling */
 .name {
   font-family: 'Allura', sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
+/* Title styling */
 .title {
   font-family: 'Ysabeau', sans-serif;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: #232c6f;
+}
+
+/* Icons container - ensure spacing */
+.icons_container i {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Adjustments for smaller screens like mobile phones */
+@media (max-width: 768px) {
+  .name {
+    font-size: 3rem; /* Smaller font for name */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+
+  .summary_container {
+    font-size: .5rem; /* Reduce font size for summary text */
+  }
+
+  /* Adjust icons size for smaller screens */
+  .icons_container i {
+    font-size: 1.5rem;
+  }
+
+  img {
+    height: 25vh; /* Make the headshot smaller */
+  }
+}
+
+/* Adjustments for tablets and mid-sized screens */
+@media (max-width: 1024px) {
+  .name {
+    font-size: 3.5rem; /* Slightly smaller font for tablets */
+  }
+
+  .title {
+    font-size: 1.75rem; /* Adjust title size */
+  }
+
+  .summary_container {
+    font-size: 1.1rem;
+  }
+
+  img {
+    height: 30vh; /* Adjust headshot size */
+  }
+
+  /* Adjust icons size for mid-sized screens */
+  .icons_container i {
+    font-size: 1.75rem;
+  }
+}
+
+/* Adjustments for landscape mode on mobile */
+@media (orientation: landscape) and (max-width: 768px) {
+  /* Container holding the image and info */
+  .content-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Vertically align the image and info box */
+    justify-content: center;
+  }
+
+  /* Name and title font adjustments */
+  .name {
+    font-size: 2.5rem; /* Smaller font size for name */
+  }
+
+  .title {
+    font-size: 1.25rem; /* Smaller title size */
+  }
+
+  .summary_container {
+    font-size: 0.9rem; /* Smaller font size for summary */
+  }
+
+  /* Image styling */
+  img {
+    height: auto; /* Ensure the aspect ratio is maintained */
+    width: 40vw; /* Set width to 30% of the container to make it proportional */
+    max-width: 150px; /* Max width to avoid it becoming too large */
+    margin-right: 15px; /* Add some space between the image and the info box */
+    border-radius: 10px; /* Keep rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for professionalism */
+  }
+
+  /* Reduce icon size to fit better on landscape */
+  .icons_container i {
+    font-size: 1.2rem;
+  }
+
+  /* General paragraph styling */
+  p {
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Adjustments for large screens and desktops */
+@media (min-width: 1200px) {
+  .name {
+    font-size: 4.5rem; /* Larger name font for desktops */
+  }
+
+  .title {
+    font-size: 2.5rem; /* Larger title size for desktops */
+  }
+
+  .summary_container {
+    font-size: 1.3rem;
+  }
+
+  img {
+    height: 40vh; /* Larger headshot for desktops */
+  }
+
+  /* Increase icon size for larger screens */
+  .icons_container i {
+    font-size: 2.5rem;
+  }
 }
