@@ -13,7 +13,7 @@ import "../styles/aboutme_page.css";
 function AboutPage() {
   return (
     <div>
-    <h1 className="title m-3" style={{ textAlign: 'center', fontSize: '3rem', color: '#d2b48c', textShadow: '2px 2px #8b4513' }}>From Passions to Purpose: My journey</h1>
+    <h1 className="title m-3" style={{ textAlign: 'center', fontSize: '3rem', color: '#d2b48c', textShadow: '2px 2px #8b4513' }}>From Passions to Purpose: My Journey</h1>
     <div className="about-card d-flex flex-wrap justify-content-center p-4">
       {/* Card 1 */}
       <Card className="dog-card m-3"  style={{ width: '25rem' }}>
