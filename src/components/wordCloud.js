@@ -5,7 +5,7 @@ const words = [
   'Teamwork', 'Collaboration', 'Frontend', 'Backend', 'Full Stack',
   'React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS', 'APIs', 'Database',
   'UXUI', 'Git', 'GitHub', 'Knowledge', 'Skills', 'Development',
-  'Software Engineering', 'Mentorship', 'Life Long Learner', 'Learning',
+  'Software Engineering','Life Long Learner', 'Learning',
   'Problem Solving', 'Communication', 'Self Motivation', 'Self-Improvement',
   'Practice', 'Synergy', 'Cooperation', 'Coordination', 'Group Work',
   'Team Building', 'Trust', 'Leadership', 'Support', 'Feedback', 'Engagement',
@@ -14,11 +14,9 @@ const words = [
   'Brainstorming', 'Networking', 'Innovation', 'Creativity', 'Problem-Solving',
   'Strategic Thinking', 'Initiative', 'Resilience', 'Agility', 'Growth Mindset',
   'Goal Achievement', 'Learning Curve', 'Adaptation', 'Team Dynamics',
-  'Collaboration Tools', 'Team Culture', 'Goal Setting', 'Consensus', 'Contribution',
-  'Inclusivity', 'Cross-Functional Teams', 'Collaboration Culture', 'Skill Development',
-  'Training', 'Workshops', 'Tutorials', 'Certification', 'Courses', 'Modules',
-  'Seminars', 'Webinars', 'E-learning', 'Study Groups', 'Research', 'Academia',
-  'Teaching', 'Learning Paths', 'Educational Resources', 'Knowledge Sharing',
+  'Team Culture', 'Goal Setting', 'Consensus', 'Contribution',
+  'Collaboration Culture', 'Skill Development',
+  'Certification', 'Courses', , 'Study Groups', 'Research', 'Learning Paths', 'Educational Resources', 'Knowledge Sharing',
   'Problem-Solving Skills', 'Learning Objectives', 'Assessments', 'Evaluation'
 ];
 
