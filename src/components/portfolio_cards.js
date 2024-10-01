@@ -112,7 +112,7 @@ function ProjectsShowcase() {
             React | React Bootstrap | Bootstrap | React Router DOM | Web Vitals | FontAwesome | Testing Library (Jest, React Testing Library)
           </p>
           <p className="text-center">
-            <a href="https://northstar-distributors-jfe5.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="View Northstar Distributors">
+            <a href="https://northstar-distributors.com/" target="_blank" rel="noopener noreferrer" aria-label="View Northstar Distributors">
               Northstar Distributors Webpage
             </a>
           </p>
